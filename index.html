@@ -1,382 +1,318 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fourniership - Avitailleur de Navires</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
-            text-align: center;
-        }
-        .container {
-            max-width: 900px;
-            margin: 50px auto;
-            background: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        .header img {
-            max-width: 300px;
-        }
-        h1 {
-            color: #005fa3;
-        }
-        p {
-            font-size: 18px;
-            line-height: 1.6;
-        }
-        .highlight {
-            color: #008000;
-            font-weight: bold;
-        }
-        .contact-section {
-    margin-top: 40px;
-    text-align: left;
-}
-.contact-section h2 {
-    color: #005fa3;
-    text-align: center;
-}
-.contact-section p {
-    text-align: center;
-    font-size: 17px;
-    margin-bottom: 30px;
-}
-form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-.form-group {
-    display: flex;
-    flex-direction: column;
-}
-label {
-    font-weight: bold;
-    margin-bottom: 5px;
-}
-input, textarea {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    font-size: 16px;
-}
-button {
-    width: 150px;
-    padding: 10px;
-    background-color: #005fa3;
-    color: white;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    align-self: center;
-    transition: background-color 0.3s ease;
-}
-button:hover {
-    background-color: #003d6b;
-}
-        .certifications {
-    margin-top: 60px;
-    text-align: center;
-}
-.certifications h2 {
-    color: #005fa3;
-    margin-bottom: 30px;
-}
-.logos {
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-    flex-wrap: wrap;
-}
-.logos img {
-    max-width: 120px;
-    height: auto;
-    object-fit: contain;
-    background-color: white;
-    padding: 10px;
-    border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-}
-        .subtitle {
-    color: #333;
-    font-size: 20px;
-    font-weight: bold;
-    margin-top: 10px;
-    line-height: 1.5;
-    text-transform: uppercase;
-    text-align: center; /* ← ici pour forcer l’alignement centré */
-}
-        .btn-siteweb {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 12px 24px;
-    background-color: #005fa3;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 6px;
-    font-weight: normal;
-    transition: background-color 0.3s ease;
-}
-.btn-siteweb:hover {
-    background-color: #003d6b;
-}
-        @media (max-width: 600px) {
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fourniership - Avitailleur de Navires</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      color: #333;
+      text-align: center;
+    }
     .container {
-        margin: 20px;
-        padding: 15px;
+      max-width: 900px;
+      margin: 50px auto;
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     }
-
+    .header img {
+      max-width: 300px;
+    }
     h1 {
-        font-size: 24px;
+      color: #005fa3;
     }
-
+    p {
+      font-size: 18px;
+      line-height: 1.6;
+    }
+    .highlight {
+      color: #008000;
+      font-weight: bold;
+    }
     .subtitle {
-        font-size: 16px;
+      color: #333;
+      font-size: 20px;
+      font-weight: bold;
+      margin-top: 10px;
+      line-height: 1.5;
+      text-transform: uppercase;
+      text-align: center;
     }
-
-    p, .contact-section p {
-        font-size: 16px;
-    }
-
-    .logos {
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    .btn-siteweb {
-        width: 100%;
-        padding: 14px 0;
-        font-size: 16px;
-    }
-
-    form {
-        gap: 10px;
-    }
-
-    input, textarea {
-        font-size: 16px;
-    }
-            @media (max-width: 600px) {
-    .container {
-        margin: 20px;
-        padding: 15px;
-    }
-
-    h1 {
-        font-size: 24px;
-    }
-
-    .subtitle {
-        font-size: 16px;
-    }
-
-    p, .contact-section p {
-        font-size: 16px;
-    }
-
     .banner img {
-        width: 100% !important;  /* étire la bannière */
-        height: auto;
-        border-radius: 0; /* optionnel : enlève les bords arrondis si tu veux */
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
     }
-
+    .contact-section {
+      margin-top: 40px;
+      text-align: left;
+    }
+    .contact-section h2 {
+      color: #005fa3;
+      text-align: center;
+    }
+    .contact-section p {
+      text-align: center;
+      font-size: 17px;
+      margin-bottom: 30px;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    .form-group {
+      display: flex;
+      flex-direction: column;
+    }
+    label {
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+    input, textarea {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 16px;
+    }
+    button {
+      width: 150px;
+      padding: 10px;
+      background-color: #005fa3;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      align-self: center;
+      transition: background-color 0.3s ease;
+    }
+    button:hover {
+      background-color: #003d6b;
+    }
+    .certifications {
+      margin-top: 60px;
+      text-align: center;
+    }
+    .certifications h2 {
+      color: #005fa3;
+      margin-bottom: 30px;
+    }
     .logos {
-        flex-direction: column;
-        align-items: center; /* ← centre chaque logo */
-        gap: 20px;
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
     }
-
     .logos img {
-        max-width: 100px;
+      max-width: 120px;
+      height: auto;
+      object-fit: contain;
+      background-color: white;
+      padding: 10px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
     }
-
     .btn-siteweb {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 24px;
+      background-color: #005fa3;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: normal;
+      transition: background-color 0.3s ease;
+    }
+    .btn-siteweb:hover {
+      background-color: #003d6b;
+    }
+    @media (max-width: 600px) {
+      .container {
+        margin: 20px;
+        padding: 15px;
+      }
+      h1 {
+        font-size: 24px;
+      }
+      .subtitle {
+        font-size: 16px;
+      }
+      p, .contact-section p {
+        font-size: 16px;
+      }
+      .banner img {
+        width: 100% !important;
+        height: auto;
+        border-radius: 0;
+      }
+      .logos {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+      }
+      .logos img {
+        max-width: 100px;
+      }
+      .btn-siteweb {
         width: 100%;
         padding: 14px 0;
         font-size: 16px;
-    }
-
-    form {
+      }
+      form {
         gap: 10px;
-    }
-
-    input, textarea {
+      }
+      input, textarea {
         font-size: 16px;
+      }
     }
-}
-
-}
-        .lang-switch {
-    text-align: right;
-    margin-top: 10px;
-    margin-right: 20px;
-}
-.lang-switch button {
-    background-color: #005fa3;
-    color: white;
-    border: none;
-    padding: 8px 14px;
-    margin-left: 5px;
-    border-radius: 5px;
-    cursor: pointer;
-}
-.lang-switch button:hover {
-    background-color: #003d6b;
-}
-
-
-
-
-
-    </style>
-</head>
-    <script>
+    .lang-switch {
+      text-align: right;
+      margin-top: 10px;
+      margin-right: 20px;
+    }
+    .lang-switch button {
+      background-color: #005fa3;
+      color: white;
+      border: none;
+      padding: 8px 14px;
+      margin-left: 5px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .lang-switch button:hover {
+      background-color: #003d6b;
+    }
+  </style>
+  <script>
     function switchLang(lang) {
-        const frContent = document.querySelector('.content.fr');
-        const enContent = document.querySelector('.content.en');
-        
-        if (lang === 'fr') {
-            frContent.style.display = 'block';
-            enContent.style.display = 'none';
-        } else {
-            frContent.style.display = 'none';
-            enContent.style.display = 'block';
-        }
+      const frContent = document.querySelector('.content.fr');
+      const enContent = document.querySelector('.content.en');
+      if (lang === 'fr') {
+        frContent.style.display = 'block';
+        enContent.style.display = 'none';
+      } else {
+        frContent.style.display = 'none';
+        enContent.style.display = 'block';
+      }
     }
-</script>
-
+  </script>
+</head>
 <body>
-    <div class="lang-switch">
+
+  <div class="lang-switch">
     <button onclick="switchLang('fr')">Français</button>
     <button onclick="switchLang('en')">English</button>
-</div>
+  </div>
 
-<div class="content fr">
-
+  <!-- VERSION FRANÇAISE -->
+  <div class="content fr">
     <div class="container">
-        <div class="header">
-            <img src="logo.jpg" alt="Logo Fourniership">
+      <div class="header">
+        <img src="logo.jpg" alt="Logo Fourniership" />
+      </div>
+      <h2 class="subtitle">Vivres, produits sous douane et service technique<br />Duty-Free</h2>
+      <h1>Fourniership - Avitailleur de Navires</h1>
+      <p>
+        <span class="highlight">Fourniership</span>, avitailleur de navires, spécialiste de l’import-export et grossiste en produits duty-free,
+        est établi à <span class="highlight">Brest depuis 1933</span>. Afin de couvrir les principaux ports de la façade atlantique et de la Manche,
+        nous disposons de <span class="highlight">trois agences commerciales</span> basées à <span class="highlight">Saint-Malo, Concarneau et Lorient</span>.
+      </p>
+      <div class="banner">
+        <img src="bannière.png" alt="Bannière types de navires" />
+      </div>
+      <p>
+        <span class="highlight">Contact :</span>
+        📧 <a href="mailto:fourniership@fship.fr">fourniership@fship.fr</a>,<br />
+        📞 <a href="tel:+33298443647">+33 2 98 44 36 47</a>
+      </p>
+      <a href="https://fship.fr" target="_blank" class="btn-siteweb">Visiter notre site web</a>
+      <div class="contact-section">
+        <h2>Contactez-nous</h2>
+        <p>Une question ? Une demande spécifique ? Notre équipe vous répond rapidement.</p>
+        <form action="mailto:fourniership@fship.fr" method="post" enctype="text/plain">
+          <div class="form-group">
+            <label for="name">Nom :</label>
+            <input type="text" id="name" name="Nom" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email :</label>
+            <input type="email" id="email" name="Email" required />
+          </div>
+          <div class="form-group">
+            <label for="message">Message :</label>
+            <textarea id="message" name="Message" rows="5" required></textarea>
+          </div>
+          <button type="submit">Envoyer</button>
+        </form>
+      </div>
+      <div class="certifications">
+        <h2>Nos certifications</h2>
+        <div class="logos">
+          <img src="image006.png" alt="ISSA - International Ship Suppliers Association" />
+          <img src="image009.png" alt="ShipServ ID 68634" />
+          <img src="image008.png" alt="AEO - Authorized Economic Operator" />
         </div>
-        <h2 class="subtitle">
-Vivres, produits sous douane et service technique <br>
-Duty-Free
-<br>
-</h2>
-
-        <h1>Fourniership - Avitailleur de Navires</h1>
-        <p>
-            <span class="highlight">Fourniership</span>, avitailleur de navires, spécialiste de l’import-export et grossiste en produits duty-free,
-            est établi à <span class="highlight">Brest depuis 1933</span>. Afin de couvrir les principaux ports de la façade atlantique et de la Manche,
-            nous disposons de <span class="highlight">trois agences commerciales</span> basées à <span class="highlight">Saint-Malo, Concarneau et Lorient</span>.
-        </p>
-         
-        <div class="banner">
-            <img src="bannière.png" alt="Bannière types de navires">
-        </div>
-        <p>
-    <span class="highlight">Contact :</span>
-    📧 <a href="mailto:fourniership@fship.fr">fourniership@fship.fr</a>,<br>
-    📞 <a href="tel:+33298443647">+33 2 98 44 36 47</a>
-
-         </p>
-        <a href="https://fship.fr" target="_blank" class="btn-siteweb">Visiter notre site web</a>
-
-             <div class="contact-section">
-            <h2>Contactez-nous</h2>
-            <p>Une question ? Une demande spécifique ? Notre équipe vous répond rapidement.</p>
-            <form action="mailto:fourniership@fship.fr" method="post" enctype="text/plain">
-                <div class="form-group">
-                    <label for="name">Nom :</label>
-                    <input type="text" id="name" name="Nom" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Email :</label>
-                    <input type="email" id="email" name="Email" required>
-                </div>
-                <div class="form-group">
-                    <label for="message">Message :</label>
-                    <textarea id="message" name="Message" rows="5" required></textarea>
-                </div>
-                <button type="submit">Envoyer</button>
-            </form>
-        </div>
-                <div class="certifications">
-            <h2>Nos certifications</h2>
-            <div class="logos">
-                <img src="image006.png" alt="ISSA - International Ship Suppliers Association">
-                <img src="image009.png" alt="ShipServ ID 68634">
-                <img src="image008.png" alt="AEO - Authorized Economic Operator">
-            </div>
-        </div>
-</div>
-
-<div class="content en" style="display: none;">
-    <div class="container">
-        <div class="header">
-            <img src="logo.jpg" alt="Logo Fourniership">
-        </div>
-
-        <h2 class="subtitle">
-            Provision, Bonded Stores and Technical Service<br>
-            Duty-Free
-        </h2>
-
-        <h1>Fourniership - Ship Chandler</h1>
-        <p>
-            <span class="highlight">Fourniership</span>, ship chandler specialized in import-export and duty-free wholesale,
-            has been established in <span class="highlight">Brest since 1933</span>. To cover the main ports along the Atlantic coast and the English Channel,
-            we operate <span class="highlight">three commercial agencies</span> located in <span class="highlight">Saint-Malo, Concarneau and Lorient</span>.
-        </p>
-
-        <div class="banner">
-            <img src="bannière.png" alt="Banner - Types of ships">
-        </div>
-
-        <p>
-            <span class="highlight">Contact:</span>
-            📧 <a href="mailto:fourniership@fship.fr">fourniership@fship.fr</a>,<br>
-            📞 <a href="tel:+33298443647">+33 2 98 44 36 47</a>
-        </p>
-
-        <a href="https://fship.fr" target="_blank" class="btn-siteweb">Visit our website</a>
-
-        <div class="contact-section">
-            <h2>Contact us</h2>
-            <p>Got a question? A specific request? Our team will respond quickly.</p>
-            <form action="mailto:fourniership@fship.fr" method="post" enctype="text/plain">
-                <div class="form-group">
-                    <label for="name">Name:</label>
-                    <input type="text" id="name" name="Name" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="Email" required>
-                </div>
-                <div class="form-group">
-                    <label for="message">Message:</label>
-                    <textarea id="message" name="Message" rows="5" required></textarea>
-                </div>
-                <button type="submit">Send</button>
-            </form>
-        </div>
-
-        <div class="certifications">
-            <h2>Our certifications</h2>
-            <div class="logos">
-                <img src="image006.png" alt="ISSA - International Ship Suppliers Association">
-                <img src="image009.png" alt="ShipServ ID 68634">
-                <img src="image008.png" alt="AEO - Authorized Economic Operator">
-            </div>
-        </div>
+      </div>
     </div>
-</div>
+  </div>
+
+  <!-- VERSION ANGLAISE -->
+  <div class="content en" style="display: none;">
+    <div class="container">
+      <div class="header">
+        <img src="logo.jpg" alt="Logo Fourniership" />
+      </div>
+      <h2 class="subtitle">Provisions, Bonded Stores and Technical Service<br />Duty-Free</h2>
+      <h1>Fourniership - Ship Chandler</h1>
+      <p>
+        <span class="highlight">Fourniership</span>, ship chandler specialized in import-export and duty-free wholesale,
+        has been established in <span class="highlight">Brest since 1933</span>. To cover the main ports along the Atlantic coast and the English Channel,
+        we operate <span class="highlight">three commercial agencies</span> located in <span class="highlight">Saint-Malo, Concarneau and Lorient</span>.
+      </p>
+      <div class="banner">
+        <img src="bannière.png" alt="Banner - Types of ships" />
+      </div>
+      <p>
+        <span class="highlight">Contact:</span>
+        📧 <a href="mailto:fourniership@fship.fr">fourniership@fship.fr</a>,<br />
+        📞 <a href="tel:+33298443647">+33 2 98 44 36 47</a>
+      </p>
+      <a href="https://fship.fr" target="_blank" class="btn-siteweb">Visit our website</a>
+      <div class="contact-section">
+        <h2>Contact us</h2>
+        <p>Got a question? A specific request? Our team will respond quickly.</p>
+        <form action="mailto:fourniership@fship.fr" method="post" enctype="text/plain">
+          <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="Name" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="Email" required />
+          </div>
+          <div class="form-group">
+            <label for="message">Message:</label>
+            <textarea id="message" name="Message" rows="5" required></textarea>
+          </div>
+          <button type="submit">Send</button>
+        </form>
+      </div>
+      <div class="certifications">
+        <h2>Our certifications</h2>
+        <div class="logos">
+          <img src="image006.png" alt="ISSA - International Ship Suppliers Association" />
+          <img src="image009.png" alt="ShipServ ID 68634" />
+          <img src="image008.png" alt="AEO - Authorized Economic Operator" />
+        </div>
+      </div>
+    </div>
+  </div>
 
 </body>
 </html>
