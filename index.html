@@ -213,13 +213,53 @@ button:hover {
 }
 
 }
+        .lang-switch {
+    text-align: right;
+    margin-top: 10px;
+    margin-right: 20px;
+}
+.lang-switch button {
+    background-color: #005fa3;
+    color: white;
+    border: none;
+    padding: 8px 14px;
+    margin-left: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.lang-switch button:hover {
+    background-color: #003d6b;
+}
+
 
 
 
 
     </style>
 </head>
+    <script>
+    function switchLang(lang) {
+        const frContent = document.querySelector('.content.fr');
+        const enContent = document.querySelector('.content.en');
+        
+        if (lang === 'fr') {
+            frContent.style.display = 'block';
+            enContent.style.display = 'none';
+        } else {
+            frContent.style.display = 'none';
+            enContent.style.display = 'block';
+        }
+    }
+</script>
+
 <body>
+    <div class="lang-switch">
+    <button onclick="switchLang('fr')">Français</button>
+    <button onclick="switchLang('en')">English</button>
+</div>
+
+<div class="content fr">
+
     <div class="container">
         <div class="header">
             <img src="logo.jpg" alt="Logo Fourniership">
@@ -269,6 +309,64 @@ Duty-Free
         </div>
                 <div class="certifications">
             <h2>Nos certifications</h2>
+            <div class="logos">
+                <img src="image006.png" alt="ISSA - International Ship Suppliers Association">
+                <img src="image009.png" alt="ShipServ ID 68634">
+                <img src="image008.png" alt="AEO - Authorized Economic Operator">
+            </div>
+        </div>
+</div>
+
+<div class="content en" style="display: none;">
+    <div class="container">
+        <div class="header">
+            <img src="logo.jpg" alt="Logo Fourniership">
+        </div>
+        <h2 class="subtitle">
+Provision, Bonded Stores and Technical Service <br>
+Duty-Free
+<br>
+</h2>
+    <h1>Fourniership - Ship Chandler</h1>
+    <p><span class="highlight">Fourniership</span>, ship chandler specialized in import-export and duty-free wholesale, 
+    has been established in <span class="highlight">Brest since 1933</span>. 
+    We operate <span class="highlight">three commercial agencies</span> located in 
+    <span class="highlight">Saint-Malo, Concarneau and Lorient</span>.</p>
+</div>
+
+         
+        <div class="banner">
+            <img src="bannière.png" alt="Bannière types de navires">
+        </div>
+        <p>
+    <span class="highlight">Contact :</span>
+    📧 <a href="mailto:fourniership@fship.fr">fourniership@fship.fr</a>,<br>
+    📞 <a href="tel:+33298443647">+33 2 98 44 36 47</a>
+
+         </p>
+        <a href="https://fship.fr" target="_blank" class="btn-siteweb">visit our website</a>
+
+             <div class="contact-section">
+            <h2>Contact-us</h2>
+            <p>Got a question? A specific request? Our team will respond quickly.</p>
+            <form action="mailto:fourniership@fship.fr" method="post" enctype="text/plain">
+                <div class="form-group">
+                    <label for="name">Nom :</label>
+                    <input type="text" id="name" name="Nom" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email :</label>
+                    <input type="email" id="email" name="Email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message :</label>
+                    <textarea id="message" name="Message" rows="5" required></textarea>
+                </div>
+                <button type="submit">Send</button>
+            </form>
+        </div>
+                <div class="certifications">
+            <h2>Our certifications</h2>
             <div class="logos">
                 <img src="image006.png" alt="ISSA - International Ship Suppliers Association">
                 <img src="image009.png" alt="ShipServ ID 68634">
