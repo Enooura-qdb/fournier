@@ -163,6 +163,55 @@ button:hover {
     input, textarea {
         font-size: 16px;
     }
+            @media (max-width: 600px) {
+    .container {
+        margin: 20px;
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    .subtitle {
+        font-size: 16px;
+    }
+
+    p, .contact-section p {
+        font-size: 16px;
+    }
+
+    .banner img {
+        width: 100% !important;  /* étire la bannière */
+        height: auto;
+        border-radius: 0; /* optionnel : enlève les bords arrondis si tu veux */
+    }
+
+    .logos {
+        flex-direction: column;
+        align-items: center; /* ← centre chaque logo */
+        gap: 20px;
+    }
+
+    .logos img {
+        max-width: 100px;
+    }
+
+    .btn-siteweb {
+        width: 100%;
+        padding: 14px 0;
+        font-size: 16px;
+    }
+
+    form {
+        gap: 10px;
+    }
+
+    input, textarea {
+        font-size: 16px;
+    }
+}
+
 }
 
 
