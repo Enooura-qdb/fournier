@@ -416,8 +416,9 @@
 
 <script>
     function switchLang(lang) {
-        const frContent = document.querySelector('.content.fr');
-        const enContent = document.querySelector('.content.en');
+        const frContent = document.getElementById('fr');
+        const enContent = document.getElementById('en');
+
         
         if (lang === 'fr') {
             frContent.style.display = 'block';
@@ -427,6 +428,21 @@
             enContent.style.display = 'block';
         }
     }
+  const frFooter = document.querySelector('.footer-fr');
+  const enFooter = document.querySelector('.footer-en');
+
+if (lang === 'fr') {
+    frContent.style.display = 'block';
+    enContent.style.display = 'none';
+    frFooter.style.display = 'block';
+    enFooter.style.display = 'none';
+} else {
+    frContent.style.display = 'none';
+    enContent.style.display = 'block';
+    frFooter.style.display = 'none';
+    enFooter.style.display = 'block';
+}
+
 </script>
 
 </body>
