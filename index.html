@@ -242,7 +242,7 @@
   </div>
 
   <!-- VERSION FRANÇAISE -->
-<div class="content fr">
+<div class="content fr lang">
   <div class="container">
     <div class="header">
       <img src="logo.jpg" alt="Logo Fourniership" />
@@ -339,7 +339,7 @@
 
 
 <!-- VERSION ANGLAISE -->
-<div class="content en" style="display: none;">
+<div class="content en lang" style="display: none;">
   <div class="container">
     <div class="header">
       <img src="logo.jpg" alt="Logo Fourniership" />
@@ -425,6 +425,9 @@
         switchLang('fr');
       }
     });
+   document.querySelectorAll('.lang').forEach(el => el.classList.remove('active'));
+document.getElementById(lang).classList.add('active');
+
   </script>
 
 
