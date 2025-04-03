@@ -5,6 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Fourniership - Avitailleur de Navires</title>
   <style>
+    .content,
+.footer {
+  display: none;
+}
+.content.active,
+.footer.active {
+  display: block;
+}
+
     body {
       font-family: Arial, sans-serif;
       margin: 0;
@@ -408,28 +417,20 @@ function switchLang(lang) {
   const frFooter = document.querySelector('.footer-fr');
   const enFooter = document.querySelector('.footer-en');
 
+  // Réinitialiser
+  [frContent, enContent].forEach(el => el.classList.remove('active'));
+  [frFooter, enFooter].forEach(el => el.classList.remove('active'));
+
   if (lang === 'fr') {
-    frContent.style.display = 'block';
-    enContent.style.display = 'none';
-    frFooter.style.display = 'block';
-    enFooter.style.display = 'none';
+    frContent.classList.add('active');
+    frFooter.classList.add('active');
     document.documentElement.lang = 'fr';
   } else {
-    frContent.style.display = 'none';
-    enContent.style.display = 'block';
-    frFooter.style.display = 'none';
-    enFooter.style.display = 'block';
+    enContent.classList.add('active');
+    enFooter.classList.add('active');
     document.documentElement.lang = 'en';
   }
 }
-    window.addEventListener('DOMContentLoaded', () => {
-  const userLang = navigator.language || navigator.userLanguage;
-  if (userLang.startsWith('en')) {
-    switchLang('en');
-  } else {
-    switchLang('fr');
-  }
-});
 
 </script>
 
