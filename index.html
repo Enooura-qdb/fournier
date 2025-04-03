@@ -245,6 +245,15 @@ function switchLang(lang) {
     document.documentElement.lang = 'en';
   }
 }
+    window.addEventListener('DOMContentLoaded', () => {
+  const userLang = navigator.language || navigator.userLanguage;
+  if (userLang.startsWith('en')) {
+    switchLang('en');
+  } else {
+    switchLang('fr');
+  }
+});
+
 </script>
 
 </head>
