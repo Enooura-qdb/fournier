@@ -324,6 +324,7 @@
   </ul>
    </div> <!-- fin de .container -->
   </div> <!-- fin de .content.fr -->
+</div>
 
     <!-- FOOTER FR -->
 <footer class="footer white-footer footer-fr">
@@ -409,14 +410,17 @@
   </p>
 </footer>
 
- <script>
+<script>
     function switchLang(lang) {
-      document.querySelectorAll('.lang').forEach(el => el.classList.remove('active'));
-      document.getElementById(lang).classList.add('active');
-      document.documentElement.lang = lang;
+      const blocks = document.querySelectorAll('.lang');
+      blocks.forEach(el => el.classList.remove('active'));
+      const target = document.getElementById(lang);
+      if (target) {
+        target.classList.add('active');
+        document.documentElement.lang = lang;
+      }
     }
 
-    // Détection automatique de la langue
     window.addEventListener('DOMContentLoaded', () => {
       const userLang = navigator.language || navigator.userLanguage;
       if (userLang.startsWith('en')) {
@@ -425,11 +429,7 @@
         switchLang('fr');
       }
     });
-   document.querySelectorAll('.lang').forEach(el => el.classList.remove('active'));
-document.getElementById(lang).classList.add('active');
-
   </script>
-
 
 </body>
 </html>
