@@ -224,38 +224,7 @@
 }
 
   </style>
-  <script>
-function switchLang(lang) {
-  const frContent = document.querySelector('.content.fr');
-  const enContent = document.querySelector('.content.en');
-  const frFooter = document.querySelector('.footer-fr');
-  const enFooter = document.querySelector('.footer-en');
-
-  if (lang === 'fr') {
-    frContent.style.display = 'block';
-    enContent.style.display = 'none';
-    frFooter.style.display = 'block';
-    enFooter.style.display = 'none';
-    document.documentElement.lang = 'fr';
-  } else {
-    frContent.style.display = 'none';
-    enContent.style.display = 'block';
-    frFooter.style.display = 'none';
-    enFooter.style.display = 'block';
-    document.documentElement.lang = 'en';
-  }
-}
-    window.addEventListener('DOMContentLoaded', () => {
-  const userLang = navigator.language || navigator.userLanguage;
-  if (userLang.startsWith('en')) {
-    switchLang('en');
-  } else {
-    switchLang('fr');
-  }
-});
-
-</script>
-
+  
 </head>
 <body>
   <!-- BOUTONS DE LANGUE -->
@@ -432,6 +401,37 @@ function switchLang(lang) {
   </p>
 </footer>
 
+<script>
+function switchLang(lang) {
+  const frContent = document.querySelector('.content.fr');
+  const enContent = document.querySelector('.content.en');
+  const frFooter = document.querySelector('.footer-fr');
+  const enFooter = document.querySelector('.footer-en');
+
+  if (lang === 'fr') {
+    frContent.style.display = 'block';
+    enContent.style.display = 'none';
+    frFooter.style.display = 'block';
+    enFooter.style.display = 'none';
+    document.documentElement.lang = 'fr';
+  } else {
+    frContent.style.display = 'none';
+    enContent.style.display = 'block';
+    frFooter.style.display = 'none';
+    enFooter.style.display = 'block';
+    document.documentElement.lang = 'en';
+  }
+}
+    window.addEventListener('DOMContentLoaded', () => {
+  const userLang = navigator.language || navigator.userLanguage;
+  if (userLang.startsWith('en')) {
+    switchLang('en');
+  } else {
+    switchLang('fr');
+  }
+});
+
+</script>
 
 </body>
 </html>
