@@ -233,7 +233,6 @@
 }
 
   </style>
-  
 </head>
 <body>
   <!-- BOUTONS DE LANGUE -->
@@ -243,7 +242,7 @@
   </div>
 
   <!-- VERSION FRANÇAISE -->
-<div class="content fr">
+  <div id="fr" class="lang active">
   <div class="container">
     <div class="header">
       <img src="logo.jpg" alt="Logo Fourniership" />
@@ -340,7 +339,7 @@
 
 
 <!-- VERSION ANGLAISE -->
-<div class="content en" style="display: none;">
+  <div id="en" class="lang">
   <div class="container">
     <div class="header">
       <img src="logo.jpg" alt="Logo Fourniership" />
@@ -410,29 +409,24 @@
   </p>
 </footer>
 
-<script>
-function switchLang(lang) {
-  const frContent = document.querySelector('.content.fr');
-  const enContent = document.querySelector('.content.en');
-  const frFooter = document.querySelector('.footer-fr');
-  const enFooter = document.querySelector('.footer-en');
+ <script>
+    function switchLang(lang) {
+      document.querySelectorAll('.lang').forEach(el => el.classList.remove('active'));
+      document.getElementById(lang).classList.add('active');
+      document.documentElement.lang = lang;
+    }
 
-  // Réinitialiser
-  [frContent, enContent].forEach(el => el.classList.remove('active'));
-  [frFooter, enFooter].forEach(el => el.classList.remove('active'));
+    // Détection automatique de la langue
+    window.addEventListener('DOMContentLoaded', () => {
+      const userLang = navigator.language || navigator.userLanguage;
+      if (userLang.startsWith('en')) {
+        switchLang('en');
+      } else {
+        switchLang('fr');
+      }
+    });
+  </script>
 
-  if (lang === 'fr') {
-    frContent.classList.add('active');
-    frFooter.classList.add('active');
-    document.documentElement.lang = 'fr';
-  } else {
-    enContent.classList.add('active');
-    enFooter.classList.add('active');
-    document.documentElement.lang = 'en';
-  }
-}
-
-</script>
 
 </body>
 </html>
