@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Fourniership - Avitailleur de Navires</title>
   <style>
-  .lang {
+    .lang {
       display: none;
     }
     .lang.active {
@@ -195,46 +195,46 @@
     .lang-switch button:hover {
       background-color: #003d6b;
     }
-.white-footer {
-  margin-top: 60px;
-  padding: 40px 20px;
-  background-color: white;
-  color: #005fa3;
-  font-size: 14px;
-  text-align: center;
-  border-top: 1px solid #e0e0e0;
-}
-.white-footer a {
-  color: #005fa3;
-  text-decoration: underline;
-}
-.white-footer a:hover {
-  color: #003d6b;
-}
-.white-footer .footer-logo {
-  max-width: 120px;
-  margin-bottom: 10px;
-}
-.white-footer .footer-top {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.white-footer .footer-slogan {
-  font-size: 16px;
-  font-style: italic;
-  margin-bottom: 20px;
-}
-    .footer-fr,
-.footer-en {
-  display: none;
-}
 
+    .white-footer {
+      margin-top: 60px;
+      padding: 40px 20px;
+      background-color: white;
+      color: #005fa3;
+      font-size: 14px;
+      text-align: center;
+      border-top: 1px solid #e0e0e0;
+    }
+    .white-footer a {
+      color: #005fa3;
+      text-decoration: underline;
+    }
+    .white-footer a:hover {
+      color: #003d6b;
+    }
+    .white-footer .footer-logo {
+      max-width: 120px;
+      margin-bottom: 10px;
+    }
+    .white-footer .footer-top {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .white-footer .footer-slogan {
+      font-size: 16px;
+      font-style: italic;
+      margin-bottom: 20px;
+    }
+
+    .footer-fr,
+    .footer-en {
+      display: none;
+    }
   </style>
 </head>
 <body>
 
-  
   <!-- BOUTONS DE LANGUE -->
   <div class="lang-switch">
     <button onclick="switchLang('fr')">Français</button>
@@ -242,8 +242,8 @@
   </div>
 
   <!-- VERSION FRANÇAISE -->
-<div id="fr" class="lang active">
-  <div class="container">
+  <div id="fr" class="lang active">
+    <div class="container">
     <div class="header">
       <img src="logo.jpg" alt="Logo Fourniership" />
     </div>
@@ -323,25 +323,20 @@
     <li style="font-size: 18px; font-weight: bold; font-style: italic;">Le Havre</li>
   </ul>
 
-
-   </div> <!-- fin de .container -->
-  </div> <!-- fin de .content.fr -->
-
-  <!-- FOOTER FR -->
-<footer class="footer white-footer footer-fr">
-  <div class="footer-top">
-    <img src="logo.jpg" alt="Logo Fourniership" class="footer-logo" />
-    <p class="footer-slogan">Votre partenaire maritime depuis 1933</p>
+    <footer class="footer white-footer footer-fr">
+      <div class="footer-top">
+        <img src="logo.jpg" alt="Logo Fourniership" class="footer-logo" />
+        <p class="footer-slogan">Votre partenaire maritime depuis 1933</p>
+      </div>
+      <p>
+        🌐 <a href="https://fship.fr" target="_blank">www.fship.fr</a>
+      </p>
+    </footer>
   </div>
-  <p>
-    🌐 <a href="https://fship.fr" target="_blank">www.fship.fr</a>
-  </p>
-</footer>
 
-
-<!-- VERSION ANGLAISE -->
+  <!-- VERSION ANGLAISE -->
   <div id="en" class="lang">
-  <div class="container">
+    <div class="container">
     <div class="header">
       <img src="logo.jpg" alt="Logo Fourniership" />
     </div>
@@ -396,52 +391,42 @@
         <img src="image009.png" alt="ShipServ ID 68634" />
         <img src="image008.png" alt="AEO - Authorized Economic Operator" />
     </div>
-
-      
-  </div> <!-- fermeture de .container -->
-</div> <!-- fermeture de .content.en -->
-   <!-- FOOTER EN -->
-<footer class="footer white-footer footer-en">
-  <div class="footer-top">
-    <img src="logo.jpg" alt="Fourniership Logo" class="footer-logo" />
-    <p class="footer-slogan">Your maritime partner since 1933</p>
+    <footer class="footer white-footer footer-en">
+      <div class="footer-top">
+        <img src="logo.jpg" alt="Fourniership Logo" class="footer-logo" />
+        <p class="footer-slogan">Your maritime partner since 1933</p>
+      </div>
+      <p>
+        🌐 <a href="https://fship.fr" target="_blank">www.fship.fr</a>
+      </p>
+    </footer>
   </div>
-  <p>
-    🌐 <a href="https://fship.fr" target="_blank">www.fship.fr</a>
-  </p>
-</footer>
 
-
-<script>
+  <script>
     function switchLang(lang) {
-        const frContent = document.getElementById('fr');
-        const enContent = document.getElementById('en');
+      const frContent = document.getElementById('fr');
+      const enContent = document.getElementById('en');
+      const frFooter = document.querySelector('.footer-fr');
+      const enFooter = document.querySelector('.footer-en');
 
-        
-        if (lang === 'fr') {
-            frContent.style.display = 'block';
-            enContent.style.display = 'none';
-        } else {
-            frContent.style.display = 'none';
-            enContent.style.display = 'block';
-        }
+      if (lang === 'fr') {
+        frContent.classList.add('active');
+        enContent.classList.remove('active');
+        frFooter.style.display = 'block';
+        enFooter.style.display = 'none';
+      } else {
+        enContent.classList.add('active');
+        frContent.classList.remove('active');
+        enFooter.style.display = 'block';
+        frFooter.style.display = 'none';
+      }
     }
-  const frFooter = document.querySelector('.footer-fr');
-  const enFooter = document.querySelector('.footer-en');
 
-if (lang === 'fr') {
-    frContent.style.display = 'block';
-    enContent.style.display = 'none';
-    frFooter.style.display = 'block';
-    enFooter.style.display = 'none';
-} else {
-    frContent.style.display = 'none';
-    enContent.style.display = 'block';
-    frFooter.style.display = 'none';
-    enFooter.style.display = 'block';
-}
-
-</script>
+    // Afficher le footer FR au chargement
+    window.onload = function () {
+      document.querySelector('.footer-fr').style.display = 'block';
+    };
+  </script>
 
 </body>
 </html>
