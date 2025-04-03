@@ -226,32 +226,32 @@
 
   </style>
 <script>
-  function switchLang(lang) {
-    const frContent = document.querySelector('.content.fr');
-    const enContent = document.querySelector('.content.en');
-    const frFooter = document.querySelector('.footer-fr');
-    const enFooter = document.querySelector('.footer-en');
+    function switchLang(lang) {
+      const frContent = document.querySelector('.content.fr');
+      const enContent = document.querySelector('.content.en');
+      const frFooter = document.querySelector('.footer-fr');
+      const enFooter = document.querySelector('.footer-en');
 
-    if (lang === 'fr') {
-      frContent.style.display = 'block';
-      enContent.style.display = 'none';
-      frFooter.style.display = 'block';
-      enFooter.style.display = 'none';
-    } else {
-      frContent.style.display = 'none';
-      enContent.style.display = 'block';
-      frFooter.style.display = 'none';
-      enFooter.style.display = 'block';
+      if (lang === 'fr') {
+        frContent.style.display = 'block';
+        enContent.style.display = 'none';
+        frFooter.style.display = 'block';
+        enFooter.style.display = 'none';
+        document.documentElement.lang = 'fr';
+      } else {
+        frContent.style.display = 'none';
+        enContent.style.display = 'block';
+        frFooter.style.display = 'none';
+        enFooter.style.display = 'block';
+        document.documentElement.lang = 'en';
+      }
     }
-  }
 
-  // Optionnel : forcer le français par défaut au chargement
-  window.addEventListener('DOMContentLoaded', () => switchLang('fr'));
-</script>
-
+    window.addEventListener('DOMContentLoaded', () => switchLang('fr'));
+  </script>
 </head>
 <body>
-
+  <!-- BOUTONS DE LANGUE -->
   <div class="lang-switch">
     <button onclick="switchLang('fr')">Français</button>
     <button onclick="switchLang('en')">English</button>
@@ -339,7 +339,9 @@
     <li style="font-size: 18px; font-weight: bold; font-style: italic;">Le Havre</li>
   </ul>
    </div> <!-- fin de .container -->
-  </div> <!-- fin de .content.en -->
+  </div> <!-- fin de .content.fr -->
+
+    <!-- FOOTER FR -->
 <footer class="footer white-footer footer-fr">
   <div class="footer-top">
     <img src="logo.jpg" alt="Logo Fourniership" class="footer-logo" />
@@ -413,6 +415,7 @@
     </div> <!-- fermeture de .container -->
 </div> <!-- fermeture de .content.en -->
 
+    <!-- FOOTER EN -->
 <footer class="footer white-footer footer-en">
   <div class="footer-top">
     <img src="logo.jpg" alt="Fourniership Logo" class="footer-logo" />
