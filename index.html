@@ -226,29 +226,23 @@
 
   </style>
 <script>
-    function switchLang(lang) {
-      const frContent = document.querySelector('.content.fr');
-      const enContent = document.querySelector('.content.en');
-      const frFooter = document.querySelector('.footer-fr');
-      const enFooter = document.querySelector('.footer-en');
+  function switchLang(lang) {
+    const frContent = document.querySelector('.content.fr');
+    const enContent = document.querySelector('.content.en');
 
-      if (lang === 'fr') {
-        frContent.style.display = 'block';
-        enContent.style.display = 'none';
-        frFooter.style.display = 'block';
-        enFooter.style.display = 'none';
-        document.documentElement.lang = 'fr';
-      } else {
-        frContent.style.display = 'none';
-        enContent.style.display = 'block';
-        frFooter.style.display = 'none';
-        enFooter.style.display = 'block';
-        document.documentElement.lang = 'en';
-      }
+    if (lang === 'fr') {
+      frContent.style.display = 'block';
+      enContent.style.display = 'none';
+    } else {
+      frContent.style.display = 'none';
+      enContent.style.display = 'block';
     }
+  }
 
-    window.addEventListener('DOMContentLoaded', () => switchLang('fr'));
-  </script>
+  // Par défaut, afficher la version française
+  window.addEventListener('DOMContentLoaded', () => switchLang('fr'));
+</script>
+
 </head>
 <body>
   <!-- BOUTONS DE LANGUE -->
