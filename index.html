@@ -236,26 +236,6 @@
 </head>
 <body>
 
-  <script>
-    function switchLang(lang) {
-      const blocks = document.querySelectorAll('.lang');
-      blocks.forEach(el => el.classList.remove('active'));
-      const target = document.getElementById(lang);
-      if (target) {
-        target.classList.add('active');
-        document.documentElement.lang = lang;
-      }
-    }
-
-    window.addEventListener('DOMContentLoaded', () => {
-      const userLang = navigator.language || navigator.userLanguage;
-      if (userLang.startsWith('en')) {
-        switchLang('en');
-      } else {
-        switchLang('fr');
-      }
-    });
-  </script>
   
   <!-- BOUTONS DE LANGUE -->
   <div class="lang-switch">
@@ -433,6 +413,20 @@
 </footer>
 
 
+<script>
+    function switchLang(lang) {
+        const frContent = document.querySelector('.content.fr');
+        const enContent = document.querySelector('.content.en');
+        
+        if (lang === 'fr') {
+            frContent.style.display = 'block';
+            enContent.style.display = 'none';
+        } else {
+            frContent.style.display = 'none';
+            enContent.style.display = 'block';
+        }
+    }
+</script>
 
 </body>
 </html>
