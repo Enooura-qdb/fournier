@@ -139,45 +139,6 @@
     .btn-siteweb:hover {
       background-color: #003d6b;
     }
-    @media (max-width: 600px) {
-      .container {
-        margin: 20px;
-        padding: 15px;
-      }
-      h1 {
-        font-size: 24px;
-      }
-      .subtitle {
-        font-size: 16px;
-      }
-      p, .contact-section p {
-        font-size: 16px;
-      }
-      .banner img {
-        width: 100% !important;
-        height: auto;
-        border-radius: 0;
-      }
-      .logos {
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
-      }
-      .logos img {
-        max-width: 100px;
-      }
-      .btn-siteweb {
-        width: 100%;
-        padding: 14px 0;
-        font-size: 16px;
-      }
-      form {
-        gap: 10px;
-      }
-      input, textarea {
-        font-size: 16px;
-      }
-    }
     .lang-switch {
       text-align: right;
       margin-top: 10px;
@@ -195,7 +156,6 @@
     .lang-switch button:hover {
       background-color: #003d6b;
     }
-
     .white-footer {
       margin-top: 60px;
       padding: 40px 20px;
@@ -226,7 +186,6 @@
       font-style: italic;
       margin-bottom: 20px;
     }
-
     .footer-fr,
     .footer-en {
       display: none;
@@ -234,171 +193,80 @@
   </style>
 </head>
 <body>
-
-  <!-- BOUTONS DE LANGUE -->
   <div class="lang-switch">
     <button onclick="switchLang('fr')">Français</button>
     <button onclick="switchLang('en')">English</button>
   </div>
 
-  <!-- VERSION FRANÇAISE -->
+  <!-- VERSION FR -->
   <div id="fr" class="lang active">
     <div class="container">
-    <div class="header">
-      <img src="logo.jpg" alt="Logo Fourniership" />
-    </div>
-
-    <h2 class="subtitle">
-      Vivres, produits sous douane et service technique<br />
-      Duty-Free
-    </h2>
-
-    <h1>Fourniership - Avitailleur de Navires</h1>
-
-    <p>
-      <span class="highlight">Fourniership</span>, avitailleur de navires, spécialiste de l’import-export et grossiste en produits duty-free,
-      est établi à <span class="highlight">Brest depuis 1933</span>. Afin de couvrir les principaux ports de la façade atlantique et de la Manche,
-      nous disposons de <span class="highlight">trois agences commerciales</span> basées à <span class="highlight">Saint-Malo, Concarneau et Lorient</span>.
-    </p>
-
-    <div class="banner">
-      <img src="bannière.png" alt="Bannière types de navires" />
-    </div>
-
-    <p>
-      <span class="highlight">Contact :</span>
-      📧 <a href="mailto:fourniership@fship.fr">fourniership@fship.fr</a>,<br />
-      📞 <a href="tel:+33298443647">+33 2 98 44 36 47</a>
-    </p>
-
-    <a href="https://fship.fr" target="_blank" class="btn-siteweb">Visiter notre site web</a>
-
-    <div class="contact-section">
-      <h2>Contactez-nous</h2>
-      <p>Une question ? Une demande spécifique ? Notre équipe vous répond rapidement.</p>
-      <form action="mailto:fourniership@fship.fr" method="post" enctype="text/plain">
-        <div class="form-group">
-          <label for="name">Nom :</label>
-          <input type="text" id="name" name="Nom" required />
+      <div class="header"><img src="logo.jpg" alt="Logo Fourniership" /></div>
+      <h2 class="subtitle">Vivres, produits sous douane et service technique<br />Duty-Free</h2>
+      <h1>Fourniership - Avitailleur de Navires</h1>
+      <p><span class="highlight">Fourniership</span>, avitailleur de navires, spécialiste de l’import-export et grossiste en produits duty-free, est établi à <span class="highlight">Brest depuis 1933</span>. Afin de couvrir les principaux ports de la façade atlantique et de la Manche, nous disposons de <span class="highlight">trois agences commerciales</span> basées à <span class="highlight">Saint-Malo, Concarneau et Lorient</span>.</p>
+      <div class="banner"><img src="bannière.png" alt="Bannière types de navires" /></div>
+      <p><span class="highlight">Contact :</span> 📧 <a href="mailto:fourniership@fship.fr">fourniership@fship.fr</a>,<br />📞 <a href="tel:+33298443647">+33 2 98 44 36 47</a></p>
+      <a href="https://fship.fr" target="_blank" class="btn-siteweb">Visiter notre site web</a>
+      <div class="contact-section">
+        <h2>Contactez-nous</h2>
+        <p>Une question ? Une demande spécifique ? Notre équipe vous répond rapidement.</p>
+        <form action="mailto:fourniership@fship.fr" method="post" enctype="text/plain">
+          <div class="form-group"><label for="name">Nom :</label><input type="text" id="name" name="Nom" required /></div>
+          <div class="form-group"><label for="email">Email :</label><input type="email" id="email" name="Email" required /></div>
+          <div class="form-group"><label for="message">Message :</label><textarea id="message" name="Message" rows="5" required></textarea></div>
+          <button type="submit">Envoyer</button>
+        </form>
+      </div>
+      <div class="certifications">
+        <h2>Nos certifications & Références</h2>
+        <div class="logos">
+          <img src="image006.png" alt="ISSA - International Ship Suppliers Association" />
+          <img src="image009.png" alt="ShipServ ID 68634" />
+          <img src="image008.png" alt="AEO - Authorized Economic Operator" />
         </div>
-        <div class="form-group">
-          <label for="email">Email :</label>
-          <input type="email" id="email" name="Email" required />
-        </div>
-        <div class="form-group">
-          <label for="message">Message :</label>
-          <textarea id="message" name="Message" rows="5" required></textarea>
-        </div>
-        <button type="submit">Envoyer</button>
-      </form>
-    </div>
-
-    <div class="certifications">
-      <h2>Nos certifications & Références</h2>
-      <div class="logos">
-        <img src="image006.png" alt="ISSA - International Ship Suppliers Association" />
-        <img src="image009.png" alt="ShipServ ID 68634" />
-        <img src="image008.png" alt="AEO - Authorized Economic Operator" />
       </div>
     </div>
-  <p style="color: #555;">
-    Fourniership est fier d’être membre de l’<strong>ISSA</strong> (International Ship Suppliers & Services Association) et titulaire de la certification <strong>AEO</strong> (Authorised Economic Operator), garantissant des services conformes aux standards douaniers et logistiques internationaux.
-  </p>
-
-  <p style="color: #555;">
-    Grâce à ses entrepôts répartis sur tout le littoral Atlantique, Fourniership fournit des prestations rapides et fiables dans les plus grands ports français. Notre expérience s’appuie sur des décennies de collaboration avec les acteurs majeurs de la marine marchande.
-  </p>
- <div class="inner">
-  <h2 style="color: #005fa3; text-align: center;">Ports desservis</h2>
-  <ul style="list-style-type: none; padding-left: 0; text-align: center;">
-    <li style="font-size: 18px; font-weight: bold; font-style: italic;">Donges</li>
-    <li style="font-size: 18px; font-weight: bold; font-style: italic;">Montoir</li>
-    <li style="font-size: 18px; font-weight: bold; font-style: italic;">Lorient</li>
-    <li style="font-size: 18px; font-weight: bold; font-style: italic;">Brest</li>
-    <li style="font-size: 18px; font-weight: bold; font-style: italic;">Cherbourg</li>
-    <li style="font-size: 18px; font-weight: bold; font-style: italic;">Concarneau</li>
-    <li style="font-size: 18px; font-weight: bold; font-style: italic;">Saint-Malo</li>
-    <li style="font-size: 18px; font-weight: bold; font-style: italic;">Rouen</li>
-    <li style="font-size: 18px; font-weight: bold; font-style: italic;">Dunkerque</li>
-    <li style="font-size: 18px; font-weight: bold; font-style: italic;">Le Havre</li>
-  </ul>
-
     <footer class="footer white-footer footer-fr">
-      <div class="footer-top">
-        <img src="logo.jpg" alt="Logo Fourniership" class="footer-logo" />
-        <p class="footer-slogan">Votre partenaire maritime depuis 1933</p>
-      </div>
-      <p>
-        🌐 <a href="https://fship.fr" target="_blank">www.fship.fr</a>
-      </p>
+      <div class="footer-top"><img src="logo.jpg" alt="Logo Fourniership" class="footer-logo" />
+      <p class="footer-slogan">Votre partenaire maritime depuis 1933</p></div>
+      <p>🌐 <a href="https://fship.fr" target="_blank">www.fship.fr</a></p>
     </footer>
   </div>
 
-  <!-- VERSION ANGLAISE -->
+  <!-- VERSION EN -->
   <div id="en" class="lang">
     <div class="container">
-    <div class="header">
-      <img src="logo.jpg" alt="Logo Fourniership" />
-    </div>
-
-    <h2 class="subtitle">
-      Provisions, Bonded Stores and Technical Service<br />Duty-Free</h2>
-
-    <h1>Fourniership - Ship Chandler</h1>
-
-    <p>
-      <span class="highlight">Fourniership</span>, ship chandler specialized in import-export and duty-free wholesale,
-      has been established in <span class="highlight">Brest since 1933</span>. To cover the main ports along the Atlantic coast and the English Channel,
-      we operate <span class="highlight">three commercial agencies</span> located in <span class="highlight">Saint-Malo, Concarneau and Lorient</span>.
-    </p>
-
-    <div class="banner">
-      <img src="bannière.png" alt="Banner - Types of ships" />
-    </div>
-
-    <p>
-      <span class="highlight">Contact:</span>
-      📧 <a href="mailto:fourniership@fship.fr">fourniership@fship.fr</a>,<br />
-      📞 <a href="tel:+33298443647">+33 2 98 44 36 47</a>
-    </p>
-
-    <a href="https://fship.fr" target="_blank" class="btn-siteweb">Visit our website</a>
-
-    <div class="contact-section">
-      <h2>Contact us</h2>
-      <p>Got a question? A specific request? Our team will respond quickly.</p>
-      <form action="mailto:fourniership@fship.fr" method="post" enctype="text/plain">
-        <div class="form-group">
-          <label for="name">Name:</label>
-          <input type="text" id="name" name="Name" required />
+      <div class="header"><img src="logo.jpg" alt="Fourniership Logo" /></div>
+      <h2 class="subtitle">Provisions, Bonded Stores and Technical Service<br />Duty-Free</h2>
+      <h1>Fourniership - Ship Chandler</h1>
+      <p><span class="highlight">Fourniership</span>, ship chandler specialized in import-export and duty-free wholesale, has been established in <span class="highlight">Brest since 1933</span>. To cover the main ports along the Atlantic coast and the English Channel, we operate <span class="highlight">three commercial agencies</span> located in <span class="highlight">Saint-Malo, Concarneau and Lorient</span>.</p>
+      <div class="banner"><img src="bannière.png" alt="Banner - Types of ships" /></div>
+      <p><span class="highlight">Contact:</span> 📧 <a href="mailto:fourniership@fship.fr">fourniership@fship.fr</a>,<br />📞 <a href="tel:+33298443647">+33 2 98 44 36 47</a></p>
+      <a href="https://fship.fr" target="_blank" class="btn-siteweb">Visit our website</a>
+      <div class="contact-section">
+        <h2>Contact us</h2>
+        <p>Got a question? A specific request? Our team will respond quickly.</p>
+        <form action="mailto:fourniership@fship.fr" method="post" enctype="text/plain">
+          <div class="form-group"><label for="name">Name:</label><input type="text" id="name" name="Name" required /></div>
+          <div class="form-group"><label for="email">Email:</label><input type="email" id="email" name="Email" required /></div>
+          <div class="form-group"><label for="message">Message:</label><textarea id="message" name="Message" rows="5" required></textarea></div>
+          <button type="submit">Send</button>
+        </form>
+      </div>
+      <div class="certifications">
+        <h2>Our certifications</h2>
+        <div class="logos">
+          <img src="image006.png" alt="ISSA - International Ship Suppliers Association" />
+          <img src="image009.png" alt="ShipServ ID 68634" />
+          <img src="image008.png" alt="AEO - Authorized Economic Operator" />
         </div>
-        <div class="form-group">
-          <label for="email">Email:</label>
-          <input type="email" id="email" name="Email" required />
-        </div>
-        <div class="form-group">
-          <label for="message">Message:</label>
-          <textarea id="message" name="Message" rows="5" required></textarea>
-        </div>
-        <button type="submit">Send</button>
-      </form>
-    </div>
-
-    <div class="certifications">
-      <h2>Our certifications</h2>
-      <div class="logos">
-        <img src="image006.png" alt="ISSA - International Ship Suppliers Association" />
-        <img src="image009.png" alt="ShipServ ID 68634" />
-        <img src="image008.png" alt="AEO - Authorized Economic Operator" />
+      </div>
     </div>
     <footer class="footer white-footer footer-en">
-      <div class="footer-top">
-        <img src="logo.jpg" alt="Fourniership Logo" class="footer-logo" />
-        <p class="footer-slogan">Your maritime partner since 1933</p>
-      </div>
-      <p>
-        🌐 <a href="https://fship.fr" target="_blank">www.fship.fr</a>
-      </p>
+      <div class="footer-top"><img src="logo.jpg" alt="Fourniership Logo" class="footer-logo" />
+      <p class="footer-slogan">Your maritime partner since 1933</p></div>
+      <p>🌐 <a href="https://fship.fr" target="_blank">www.fship.fr</a></p>
     </footer>
   </div>
 
@@ -422,11 +290,9 @@
       }
     }
 
-    // Afficher le footer FR au chargement
     window.onload = function () {
       document.querySelector('.footer-fr').style.display = 'block';
     };
   </script>
-
 </body>
 </html>
