@@ -224,6 +224,7 @@
 }
 
   </style>
+  <script>
 function switchLang(lang) {
   const frContent = document.querySelector('.content.fr');
   const enContent = document.querySelector('.content.en');
@@ -244,9 +245,6 @@ function switchLang(lang) {
     document.documentElement.lang = 'en';
   }
 }
-
-  // Par défaut, afficher la version française
-  window.addEventListener('DOMContentLoaded', () => switchLang('fr'));
 </script>
 
 </head>
