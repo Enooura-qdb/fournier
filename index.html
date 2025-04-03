@@ -233,9 +233,11 @@
     if (lang === 'fr') {
       frContent.style.display = 'block';
       enContent.style.display = 'none';
+       document.documentElement.lang = 'fr';
     } else {
       frContent.style.display = 'none';
       enContent.style.display = 'block';
+       document.documentElement.lang = 'en';
     }
   }
 
