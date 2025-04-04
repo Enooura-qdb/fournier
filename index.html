@@ -190,6 +190,26 @@
     .footer-en {
       display: none;
     }
+        }
+    .domains-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+    .domain-item {
+      background-color: #eaf4fb;
+      color: #005fa3;
+      padding: 15px 20px;
+      border-radius: 12px;
+      font-size: 16px;
+      font-weight: bold;
+      box-shadow: 0 4px 10px rgba(0, 95, 163, 0.1);
+      transition: transform 0.2s ease;
+    }
+    .domain-item:hover {
+      transform: translateY(-5px);
+    }
   </style>
 </head>
 <body>
@@ -300,6 +320,19 @@ Thanks to its warehouses located all along the Atlantic coast, Fourniership prov
     <li style="font-size: 18px; font-weight: bold; font-style: italic;">Dunkerque</li>
     <li style="font-size: 18px; font-weight: bold; font-style: italic;">Le Havre</li>
   </ul>
+          <h2 class="subtitle">Our Main Domains</h2>
+    <div class="domains-grid">
+      <div class="domain-item">Provisions</div>
+      <div class="domain-item">Bonded Stores</div>
+      <div class="domain-item">Technical Stores</div>
+      <div class="domain-item">Deck & Engine Stores</div>
+      <div class="domain-item">Full range from IMPA / ISSA catalogues</div>
+      <div class="domain-item">Medical Stores</div>
+      <div class="domain-item">Nautical Publications</div>
+      <div class="domain-item">Safety Equipment</div>
+      <div class="domain-item">Tank Cleaning Products</div>
+      <div class="domain-item">Absorbents for Spill Clean-Up</div>
+    </div>
     </div>
     <footer class="footer white-footer footer-en">
       <div class="footer-top"><img src="logo.jpg" alt="Fourniership Logo" class="footer-logo" />
