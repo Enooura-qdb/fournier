@@ -191,21 +191,23 @@
       display: none;
     }
         }
-    .domains-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
+   .domains-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
       margin-top: 20px;
     }
     .domain-item {
       background-color: #eaf4fb;
       color: #005fa3;
-      padding: 15px 20px;
+      padding: 12px 24px;
       border-radius: 12px;
       font-size: 16px;
       font-weight: bold;
       box-shadow: 0 4px 10px rgba(0, 95, 163, 0.1);
       transition: transform 0.2s ease;
+      white-space: nowrap;
     }
     .domain-item:hover {
       transform: translateY(-5px);
