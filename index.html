@@ -459,10 +459,10 @@
       <p class="footer-slogan">Votre partenaire maritime depuis 1933</p></div>
       <p>🌐 <a href="https://fship.fr" target="_blank">www.fship.fr</a></p>
        <p>&copy; 2025 Fourniership — Tous droits réservés</p>
-  <a href="#mentions-legales" class="legal-toggle">Mentions légales</a>
+  <a href="#mentions-legales-fr" id="legal-toggle-fr" class="legal-toggle">Mentions légales</a>
     </footer>
     <!-- Accordéon : mentions légales -->
-<div id="mentions-legales" class="legal-section">
+<div id="mentions-legales-fr" class="legal-section">
   <h3>Mentions légales</h3>
   <div class="legal-content">
     <p><strong>Fourniership</strong><br>
@@ -570,10 +570,10 @@ Thanks to its warehouses located all along the Atlantic coast, Fourniership prov
       <p class="footer-slogan">Your maritime partner since 1933</p></div>
       <p>🌐 <a href="https://fship.fr" target="_blank">www.fship.fr</a></p>
        <p>&copy; 2025 Fourniership — Tous droits réservés</p>
-  <a href="#mentions-legales" class="legal-toggle">Mentions légales</a>
+  <a href="#mentions-legales-en" id="legal-toggle-en" class="legal-toggle">Mentions légales</a>
     </footer>
     <!-- Accordéon : mentions légales -->
-<div id="mentions-legales" class="legal-section">
+<div id="mentions-legales-en" class="legal-section">
   <h3>Mentions légales</h3>
   <div class="legal-content">
     <p><strong>Fourniership</strong><br>
@@ -599,45 +599,68 @@ Thanks to its warehouses located all along the Atlantic coast, Fourniership prov
 </div>
   </div>
 
-  <script>
-    function switchLang(lang) {
-      const frContent = document.getElementById('fr');
-      const enContent = document.getElementById('en');
-      const frFooter = document.querySelector('.footer-fr');
-      const enFooter = document.querySelector('.footer-en');
+<script>
+  function switchLang(lang) {
+    const frContent = document.getElementById('fr');
+    const enContent = document.getElementById('en');
+    const frFooter = document.querySelector('.footer-fr');
+    const enFooter = document.querySelector('.footer-en');
+    const frSidebar = document.getElementById('sidebar-ports-fr');
+    const enSidebar = document.getElementById('sidebar-ports-en');
+    const frMentions = document.getElementById('mentions-legales-fr');
+    const enMentions = document.getElementById('mentions-legales-en');
 
-      if (lang === 'fr') {
-        frContent.classList.add('active');
-        enContent.classList.remove('active');
-        frFooter.style.display = 'block';
-        enFooter.style.display = 'none';
-      } else {
-        enContent.classList.add('active');
-        frContent.classList.remove('active');
-        enFooter.style.display = 'block';
-        frFooter.style.display = 'none';
-      }
+    if (lang === 'fr') {
+      frContent.classList.add('active');
+      enContent.classList.remove('active');
+      frFooter.style.display = 'block';
+      enFooter.style.display = 'none';
+      if (frSidebar) frSidebar.style.display = 'block';
+      if (enSidebar) enSidebar.style.display = 'none';
+      if (frMentions) frMentions.style.display = 'none';
+    } else {
+      enContent.classList.add('active');
+      frContent.classList.remove('active');
+      enFooter.style.display = 'block';
+      frFooter.style.display = 'none';
+      if (enSidebar) enSidebar.style.display = 'block';
+      if (frSidebar) frSidebar.style.display = 'none';
+      if (enMentions) enMentions.style.display = 'none';
     }
+  }
 
-    window.onload = function () {
-      document.querySelector('.footer-fr').style.display = 'block';
-          // Fonction pour les mentions légales
-    const toggleButton = document.querySelector(".legal-toggle");
-    const legalSection = document.getElementById("mentions-legales");
+  window.addEventListener('DOMContentLoaded', function () {
+    const frFooter = document.querySelector('.footer-fr');
+    const frSidebar = document.getElementById('sidebar-ports-fr');
+    if (frFooter) frFooter.style.display = 'block';
+    if (frSidebar) frSidebar.style.display = 'block';
 
-    if (toggleButton && legalSection) {
-      toggleButton.addEventListener("click", function () {
-        if (legalSection.style.display === "none" || !legalSection.style.display) {
-          legalSection.style.display = "block";
-          legalSection.scrollIntoView({ behavior: "smooth" });
-        } else {
-          legalSection.style.display = "none";
-        }
+    // FR toggle
+    const frToggle = document.getElementById("legal-toggle-fr");
+    const frSection = document.getElementById("mentions-legales-fr");
+    if (frToggle && frSection) {
+      frToggle.addEventListener("click", function (e) {
+        e.preventDefault();
+        const isVisible = frSection.style.display === "block";
+        frSection.style.display = isVisible ? "none" : "block";
+        if (!isVisible) frSection.scrollIntoView({ behavior: "smooth" });
       });
     }
-    };
 
-  </script>
+    // EN toggle
+    const enToggle = document.getElementById("legal-toggle-en");
+    const enSection = document.getElementById("mentions-legales-en");
+    if (enToggle && enSection) {
+      enToggle.addEventListener("click", function (e) {
+        e.preventDefault();
+        const isVisible = enSection.style.display === "block";
+        enSection.style.display = isVisible ? "none" : "block";
+        if (!isVisible) enSection.scrollIntoView({ behavior: "smooth" });
+      });
+    }
+  });
+</script>
+
   <!-- Bloc Ports desservis en français -->
   <div class="sidebar-ports">
   <h3>Ports desservis</h3>
