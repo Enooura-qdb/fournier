@@ -209,8 +209,9 @@
       transition: transform 0.2s ease;
       white-space: nowrap;
       display: inline-block; /* 🔥 clé pour que ça prenne la taille du contenu */
-  width: auto;            /* ✅ pour éviter toute largeur forcée */
-  text-align: center;
+      width: auto;    /* ✅ pour éviter toute largeur forcée */
+      text-align: center;
+      margin: 10px; /* espace autour de chaque bouton */
     }
     .domain-item:hover {
       transform: translateY(-5px);
@@ -253,7 +254,7 @@
   font-size: 16px;
   line-height: 1.8;
   font-family: Arial, sans-serif;
-     text-align: justify; /* 👈 Justification du texte */
+  text-align: justify; /* 👈 Justification du texte */
 }
 
 .about-section strong {
