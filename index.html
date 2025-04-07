@@ -208,7 +208,9 @@
       box-shadow: 0 4px 10px rgba(0, 95, 163, 0.1);
       transition: transform 0.2s ease;
       white-space: nowrap;
-      width: auto;
+      display: inline-block; /* 🔥 clé pour que ça prenne la taille du contenu */
+  width: auto;            /* ✅ pour éviter toute largeur forcée */
+  text-align: center;
     }
     .domain-item:hover {
       transform: translateY(-5px);
