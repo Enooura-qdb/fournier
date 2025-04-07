@@ -294,16 +294,6 @@
 .sidebar-ports li {
   margin-bottom: 6px;
 }
-    .lang-content {
-  display: none;
-}
-.lang-content.active {
-  display: block;
-}
-
-.sidebar-ports:not(.active) {
-  display: none;
-}
 
 /* 🌐 Version mobile : le bloc devient classique */
 @media screen and (max-width: 768px) {
@@ -511,10 +501,6 @@ Thanks to its warehouses located all along the Atlantic coast, Fourniership prov
       const frFooter = document.querySelector('.footer-fr');
       const enFooter = document.querySelector('.footer-en');
 
-      // Ajout : blocs "Ports desservis"
-    const frSidebar = document.getElementById('sidebar-ports-fr');
-    const enSidebar = document.getElementById('sidebar-ports-en');
-
       if (lang === 'fr') {
         frContent.classList.add('active');
         enContent.classList.remove('active');
@@ -531,10 +517,7 @@ Thanks to its warehouses located all along the Atlantic coast, Fourniership prov
     window.onload = function () {
       document.querySelector('.footer-fr').style.display = 'block';
     };
-      // Affiche la sidebar FR au chargement
-    const frSidebar = document.getElementById('sidebar-ports-fr');
-    if (frSidebar) frSidebar.classList.add('active');
-  }
+
   </script>
   <!-- Bloc Ports desservis en français -->
   <div class="sidebar-ports">
