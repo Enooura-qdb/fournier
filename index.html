@@ -261,6 +261,69 @@
   color: #008000; /* vert foncé */
   font-weight: bold;
 }
+.sidebar-ports {
+  position: fixed;
+  top: 100px;
+  right: 20px;
+  background-color: white;
+  border: 1px solid #ddd;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  font-style: italic;
+  z-index: 999;
+  width: 180px;
+  transition: all 0.3s ease;
+}
+
+.sidebar-ports h3 {
+  color: #005fa3;
+  text-align: center;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.sidebar-ports ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+.sidebar-ports li {
+  margin-bottom: 6px;
+}
+
+/* 🌐 Version mobile : le bloc devient classique */
+@media screen and (max-width: 768px) {
+  .sidebar-ports {
+    position: static;
+    width: auto;
+    margin: 40px auto;
+    box-shadow: none;
+    border: none;
+    font-style: normal;
+    text-align: center;
+  }
+
+  .sidebar-ports h3 {
+    font-size: 20px;
+    margin-bottom: 8px;
+  }
+
+  .sidebar-ports ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .sidebar-ports li {
+    margin: 5px 10px;
+    font-weight: bold;
+    color: #005fa3;
+  }
+}
 
   </style>
 </head>
@@ -454,5 +517,20 @@ Thanks to its warehouses located all along the Atlantic coast, Fourniership prov
       document.querySelector('.footer-fr').style.display = 'block';
     };
   </script>
+  <div class="sidebar-ports">
+  <h3>Ports desservis</h3>
+  <ul>
+    <li>Donges</li>
+    <li>Montoir</li>
+    <li>Lorient</li>
+    <li>Brest</li>
+    <li>Cherbourg</li>
+    <li>Concarneau</li>
+    <li>Saint-Malo</li>
+    <li>Rouen</li>
+    <li>Dunkerque</li>
+    <li>Le Havre</li>
+  </ul>
+</div>
 </body>
 </html>
