@@ -213,6 +213,45 @@
     .domain-item:hover {
       transform: translateY(-5px);
     }
+    .tab-buttons {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .tab-link {
+    background-color: #f0f8ff;
+    border: none;
+    padding: 10px 20px;
+    margin: 0 5px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    color: #005fa3;
+    transition: background-color 0.3s ease;
+  }
+
+  .tab-link.active,
+  .tab-link:hover {
+    background-color: #cce5f6;
+  }
+
+  .tab-content {
+    display: none;
+  }
+
+  .tab-content.active {
+    display: block;
+  }
+
+  .about-section {
+    max-width: 800px;
+    margin: auto;
+    background: #f8fcff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 95, 163, 0.1);
+    color: #00395f;
+  }
   </style>
 </head>
 <body>
@@ -349,6 +388,43 @@ Thanks to its warehouses located all along the Atlantic coast, Fourniership prov
       <div class="domain-item">Tank Cleaning Products</div>
       <div class="domain-item">Absorbents for Spill Clean-Up</div>
     </div>
+      <!-- Onglets de navigation -->
+<div class="tab-buttons">
+  <button class="tab-link active" onclick="openTab(event, 'domains')">Our Domains</button>
+  <button class="tab-link" onclick="openTab(event, 'about')">About Us</button>
+</div>
+
+<!-- Contenu des onglets -->
+<div id="domains" class="tab-content active">
+  <h2 class="subtitle">Our Main Domains</h2>
+  <div class="domains-grid">
+    <div class="domain-item">Provisions</div>
+    <div class="domain-item">Bonded Stores</div>
+    <div class="domain-item">Technical Stores</div>
+    <div class="domain-item">Deck & Engine Stores</div>
+    <div class="domain-item">Full range from IMPA / ISSA catalogues</div>
+    <div class="domain-item">Medical Stores</div>
+    <div class="domain-item">Nautical Publications</div>
+    <div class="domain-item">Safety Equipment</div>
+    <div class="domain-item">Tank Cleaning Products</div>
+    <div class="domain-item">Absorbents for Spill Clean-Up</div>
+  </div>
+</div>
+
+<div id="about" class="tab-content">
+  <h2 class="subtitle">About Us</h2>
+  <div class="about-section">
+    <p><strong>Fourniership</strong> is a Shipchandler Company founded in 1933.</p>
+    <p>The head office is located in Brest.<br>
+    We have three branch offices with warehouse facilities in Lorient, Concarneau, and Saint-Malo.</p>
+    <p>Thanks to our warehousing capacities, we can keep thousands of products in stock.</p>
+    <p><strong>Fourniership</strong> is an ISSA Member and Customs AEO certificated.</p>
+    <p><strong>Fourniership</strong> is renowned for the high quality of the products supplied and the professionalism of its team.</p>
+    <p><strong>Our credo</strong>: a high level of services complying with Safety of Life at Sea.</p>
+    <p><strong>Our aim</strong>: competitive cost and entire satisfaction of our clients.</p>
+    <p><strong>Our motivation</strong>: enthusiasm and passion for the maritime world.</p>
+  </div>
+</div>
     </div>
     <footer class="footer white-footer footer-en">
       <div class="footer-top"><img src="logo.jpg" alt="Fourniership Logo" class="footer-logo" />
@@ -380,6 +456,25 @@ Thanks to its warehouses located all along the Atlantic coast, Fourniership prov
     window.onload = function () {
       document.querySelector('.footer-fr').style.display = 'block';
     };
+    <script>
+  function openTab(evt, tabName) {
+    const parent = evt.currentTarget.closest(".language-content");
+    const contents = parent.querySelectorAll(".tab-content");
+    const links = parent.querySelectorAll(".tab-link");
+
+    contents.forEach(el => el.classList.remove("active"));
+    links.forEach(el => el.classList.remove("active"));
+
+    document.getElementById(tabName).classList.add("active");
+    evt.currentTarget.classList.add("active");
+  }
+
+  function switchLanguage(lang) {
+    document.querySelectorAll('.language-content').forEach(el => el.classList.remove("active"));
+    document.getElementById(lang).classList.add("active");
+  }
+</script>
+
   </script>
 </body>
 </html>
