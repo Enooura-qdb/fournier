@@ -456,23 +456,6 @@ Thanks to its warehouses located all along the Atlantic coast, Fourniership prov
     window.onload = function () {
       document.querySelector('.footer-fr').style.display = 'block';
     };
-
-  function openTab(evt, tabName) {
-    const parent = evt.currentTarget.closest(".language-content");
-    const contents = parent.querySelectorAll(".tab-content");
-    const links = parent.querySelectorAll(".tab-link");
-
-    contents.forEach(el => el.classList.remove("active"));
-    links.forEach(el => el.classList.remove("active"));
-
-    document.getElementById(tabName).classList.add("active");
-    evt.currentTarget.classList.add("active");
-  }
-
-  function switchLanguage(lang) {
-    document.querySelectorAll('.language-content').forEach(el => el.classList.remove("active"));
-    document.getElementById(lang).classList.add("active");
-  }
   </script>
 </body>
 </html>
